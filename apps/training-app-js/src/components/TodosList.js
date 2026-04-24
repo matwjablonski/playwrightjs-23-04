@@ -171,7 +171,7 @@ export class TodosList extends Component {
         // Todos Grid
         this.createElement(
           'div', 
-          { class: 'fixed-grid has-2-cols' }, 
+          { class: 'fixed-grid has-2-cols todos-list', 'data-purpose': 'todos-grid' }, 
           [
             this.createElement(
               'div',
