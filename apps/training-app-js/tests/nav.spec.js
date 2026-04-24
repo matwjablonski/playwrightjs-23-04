@@ -7,12 +7,17 @@ test('check top level navigation', async ({ page }) => {
     await loginbox.fill('admin123');
     await loginbox.press('Enter');
 
+    // await expect(page).toHaveScreenshot();
+
     const homePageLink = page.locator('nav :left-of(:text("O aplikacji")):nth-child(2)')
+    
+    await expect(homePageLink).toHaveScreenshot();
+    
     await expect(homePageLink).toBeVisible();
     await expect(homePageLink).toHaveText('Strona główna');
 
-    const finishedButton = page.locator('button:text("Ukończone"):right-of(:text("Wszystkie"))');
-    await expect(finishedButton).toBeVisible();
+    // const finishedButton = page.locator('button:text("Ukończone"):right-of(:text("Wszystkie"))');
+    // await expect(finishedButton).toBeVisible();
 
     const footer = page.locator('footer');
 

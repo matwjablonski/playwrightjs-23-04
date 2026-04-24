@@ -32,10 +32,10 @@ export class TodosService extends Service {
   async fetchTodos() {
     try {
       // Check if we have data in localStorage first
-      const savedTodos = this.DataStoreService.get('todos');
-      if (savedTodos && savedTodos.length > 0) {
-        return;
-      }
+      // const savedTodos = this.DataStoreService.get('todos');
+      // if (savedTodos && savedTodos.length > 0) {
+      //   return;
+      // }
 
       const response = await fetch('/data.json')
       const { data } = await response.json();

@@ -55,13 +55,14 @@ export class Nav extends Component {
                 'a',
                 { 
                   class: 'navbar-item',
+                  style: 'color: red; font-weight: bold;',
                   href: '#/',
                   onClick: (event) => {
                     event.preventDefault();
                     this.handleNavigation('/');
                   }
                 },
-                ['Strona główna']
+                ['Home App Page and todos']
               ),
               this.createElement(
                 'a',
